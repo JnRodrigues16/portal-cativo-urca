@@ -52,19 +52,20 @@
 
     /* Container principal */
     .container {
-      background: transparent;
+      background: rgba(255, 255, 255, 0.15);
       padding: 60px 50px;
       border-radius: 18px;
-      box-shadow: none;
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
       max-width: 550px;
       width: 100%;
       text-align: center;
       color: #ffffff;
-      backdrop-filter: none;
+      backdrop-filter: blur(10px);
       animation: slideUp 0.7s ease-out;
       position: relative;
       z-index: 1;
       text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+      border: 1px solid rgba(255, 255, 255, 0.2);
     }
 
     @keyframes slideUp {
@@ -101,7 +102,7 @@
       font-size: 2.2rem;
       font-weight: 700;
       letter-spacing: 0.05em;
-      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+      text-shadow: 0 3px 10px rgba(0, 0, 0, 0.7);
     }
 
     .subtitle {
@@ -110,7 +111,7 @@
       margin-bottom: 40px;
       line-height: 1.7;
       font-weight: 500;
-      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+      text-shadow: 0 3px 10px rgba(0, 0, 0, 0.7);
     }
 
     .btn-portal {
@@ -145,7 +146,7 @@
       color: #ffffff;
       font-weight: 500;
       letter-spacing: 0.02em;
-      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+      text-shadow: 0 3px 10px rgba(0, 0, 0, 0.7);
     }
 
     @media (max-width: 600px) {
@@ -202,7 +203,7 @@
 </head>
 <body>
   <!-- Vídeo de fundo -->
-  <video autoplay muted playsinline class="video-background">
+  <video autoplay muted loop playsinline class="video-background">
     <source src="video-home-3.mp4" type="video/mp4">
     Seu navegador não suporta vídeos HTML5.
   </video>
@@ -212,11 +213,11 @@
 
   <!-- Container principal -->
   <div class="container" role="main">
-    <img src="download.png" alt="Logo Grupo URCN Energia" class="logo" />
+    <img src="download.png" alt="Logo Grupo Urca Energia" class="logo" />
     <h1>Bem-vindo</h1>
-    <p class="subtitle">Acesse o portal de visitantes do Grupo URCN Energia. Preencha o formulário para liberar seu acesso à internet.</p>
+    <p class="subtitle">Acesse o portal de visitantes do Grupo Urca Energia. Preencha o formulário para liberar seu acesso à internet.</p>
     <a href="formulario.html" class="btn-portal">Acessar Portal</a>
-    <p class="footer-text">© 2025 Grupo URCN Energia • Todos os direitos reservados</p>
+    <p class="footer-text">© 2025 Grupo Urca Energia • Todos os direitos reservados</p>
   </div>
 </body>
 </html>

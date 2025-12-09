@@ -52,18 +52,19 @@
 
     /* Container principal */
     .container {
-      background: rgba(255, 255, 255, 0.96);
+      background: transparent;
       padding: 60px 50px;
       border-radius: 18px;
-      box-shadow: 0 25px 70px rgba(0, 0, 0, 0.35);
+      box-shadow: none;
       max-width: 550px;
       width: 100%;
       text-align: center;
-      color: #1a1a1a;
-      backdrop-filter: blur(12px);
+      color: #ffffff;
+      backdrop-filter: none;
       animation: slideUp 0.7s ease-out;
       position: relative;
       z-index: 1;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
     }
 
     @keyframes slideUp {
@@ -95,19 +96,21 @@
     }
 
     h1 {
-      color: #003d7a;
+      color: #ffffff;
       margin-bottom: 15px;
       font-size: 2.2rem;
       font-weight: 700;
       letter-spacing: 0.05em;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
     }
 
     .subtitle {
-      color: #555;
+      color: #ffffff;
       font-size: 1.15rem;
       margin-bottom: 40px;
       line-height: 1.7;
       font-weight: 500;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
     }
 
     .btn-portal {
@@ -139,9 +142,10 @@
     .footer-text {
       margin-top: 35px;
       font-size: 0.9rem;
-      color: #888;
+      color: #ffffff;
       font-weight: 500;
       letter-spacing: 0.02em;
+      text-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
     }
 
     @media (max-width: 600px) {
@@ -198,7 +202,7 @@
 </head>
 <body>
   <!-- Vídeo de fundo -->
-  <video autoplay muted loop playsinline class="video-background">
+  <video autoplay muted playsinline class="video-background">
     <source src="video-home-3.mp4" type="video/mp4">
     Seu navegador não suporta vídeos HTML5.
   </video>

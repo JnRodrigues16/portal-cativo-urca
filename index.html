@@ -203,7 +203,7 @@
 </head>
 <body>
   <!-- Vídeo de fundo -->
-  <video autoplay muted loop playsinline class="video-background">
+  <video autoplay muted playsinline class="video-background" id="bgVideo">
     <source src="video-home-3.mp4" type="video/mp4">
     Seu navegador não suporta vídeos HTML5.
   </video>
@@ -219,5 +219,17 @@
     <a href="formulario.html" class="btn-portal">Acessar Portal</a>
     <p class="footer-text">© 2025 Grupo Urca Energia • Todos os direitos reservados</p>
   </div>
+
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const video = document.getElementById('bgVideo');
+      setTimeout(() => {
+        window.location.href = 'formulario.html';
+      }, 60000);
+      video.addEventListener('ended', () => {
+        video.pause();
+      });
+    });
+  </script>
 </body>
 </html>

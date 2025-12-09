@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Acesso Liberado</title>
+  <link rel="icon" type="image/svg+xml" href="https://acessogv.github.io/logogv/favicon.svg" />
+  <style>
+    body, html {
+      height: 100%;
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #f7f9fa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #1a1a1a;
+      padding: 20px;
+    }
+    .message-box {
+      background: #fff;
+      padding: 40px 30px;
+      border-radius: 14px;
+      box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+      max-width: 480px;
+    }
+    .logo {
+      max-width: 180px;
+      margin: 0 auto 20px;
+      display: block;
+    }
+    h1 {
+      color: #003d7a; /* Cor ajustada para combinar com a logo URCN */
+      margin-bottom: 20px;
+    }
+    p {
+      font-size: 1.15rem;
+      line-height: 1.6;
+      margin-bottom: 10px;
+    }
+    .loader {
+      border: 6px solid #f3f3f3;
+      border-top: 6px solid #ff8c00; /* Cor ajustada para combinar com a logo URCN */
+      border-radius: 50%;
+      width: 40px;
+      height: 40px;
+      animation: spin 1s linear infinite;
+      margin: 20px auto 0;
+    }
+    @keyframes spin {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+  <script>
+    window.addEventListener('DOMContentLoaded', () => {
+      const params = new URLSearchParams(window.location.search);
+      const baseGrantUrl = params.get("base_grant_url");
+      const continueUrl = params.get("user_continue_url") || "https://gasverde.com.br";
+
+      let timeLeft = 10;
+      // Não há um elemento de timer visível, mas o script de redirecionamento permanece
+      
+      const countdownInterval = setInterval(() => {
+        timeLeft--;
+
+        if (timeLeft <= 0) {
+          clearInterval(countdownInterval);
+          if (baseGrantUrl) {
+            const grantRedirect = `${baseGrantUrl}?continue_url=${encodeURIComponent(continueUrl)}`;
+            window.location.href = grantRedirect;
+          } else {
+            window.location.href = continueUrl;
+          }
+        }
+      }, 1000);
+    });
+  </script>
+</head>
+<body>
+  <div class="message-box" role="main">
+    <img src="download.png" alt="Logo Grupo URCN Energia" class="logo" />
+    <h1>Acesso Liberado</h1>
+    <p>Você finalizou o preenchimento com sucesso.</p>
+    <p>Em instantes você será redirecionado e seu acesso será liberado automaticamente.</p>
+    <div class="loader" aria-label="Carregando..."></div>
+  </div>
+</body>
+</html>

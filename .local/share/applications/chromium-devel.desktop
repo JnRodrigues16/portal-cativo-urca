@@ -1,0 +1,10 @@
+[Desktop Entry]
+Version=1.0
+Encoding=UTF-8
+Name=Chromium
+Exec=/opt/.manus/anchor-browser/Prod/chrome-wrapper %U
+Terminal=false
+Icon=/opt/.manus/anchor-browser/Prod/product_logo_48.png
+Type=Application
+Categories=Application;Network;WebBrowser;
+MimeType=text/html;text/xml;application/xhtml_xml;
